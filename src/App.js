@@ -17,23 +17,11 @@ class App extends Component {
     children: PropTypes.object.isRequired
   };
 
+  
 
-  componentDidMount(){
-    const URL = 'https://api.themoviedb.org/3/trending/all/day?api_key=2b190de5c94ef62cf74f1721f6fa6e2c';
-    fetch(URL)
-    .then(function(response) {
-      return response.json();
-    })
-    .then(
-      (myJson) =>{
-        this.setState({data: myJson.results})
-      }
-    );
-  }
-
-
-
+  
   render() {
+    //this.getMovies()
     const { children } = this.props;
     return (
     <div className="App">
@@ -41,7 +29,7 @@ class App extends Component {
         title="P3D Test"
         items={items}
       />
-        <Content body={children} />
+        <Content body={children}/>
     </div>
     );
   }

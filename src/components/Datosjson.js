@@ -17,7 +17,7 @@ class DatosJson extends Component {
   }
 
   getArtist = async () => {
-    const URL = 'https://ws.audioscrobbler.com/2.0/?method=geo.gettopartists&country=spain&api_key=3eca685b2bbeb583fb83dc0f645239be&format=json';
+    const URL = 'https://ws.audioscrobbler.com/2.0/?method=geo.gettopartists&country=spain&api_key=[YOUR_API_KEY]&format=json';
     const api_call = await fetch(URL)
     const data = await api_call.json()
     const itm = await data.topartists.artist
